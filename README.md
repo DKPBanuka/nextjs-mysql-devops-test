@@ -1,21 +1,14 @@
-# NextJS MySQL DevOps Assessment - Interview Challenge
+# NextJS MySQL DevOps Project
 
-Welcome to the **DevOps Interview Assessment**! This is a hands-on practical evaluation designed to test your DevOps knowledge and skills. As an interview candidate, you must complete the following tasks to demonstrate your understanding of containerization, CI/CD pipelines, and modern deployment practices.
+A production-ready Next.js application with MySQL database, containerized with Docker, and deployed via GitHub Actions CI/CD pipeline.
 
-## 📋 Interview Assessment Overview
+## Stack
 
-This assessment evaluates your ability to:
-- ✅ Create production-ready Docker images
-- ✅ Implement Docker Compose for multi-container applications
-- ✅ Push Docker images to Docker Hub
-- ✅ Set up GitHub Actions CI/CD pipelines
-- ✅ Configure secure secrets management
-- ✅ Troubleshoot and debug containerized applications
-
-**Assessment Format**: Hands-on practical exercise
-**Time Expected**: 2-3 hours
-**Difficulty Level**: Intermediate to Advanced
-**Technologies**: Docker, Docker Compose, GitHub Actions, Docker Hub
+- **Frontend/Backend**: Next.js 14 + TypeScript
+- **Database**: MySQL 8.0
+- **Containerization**: Docker & Docker Compose
+- **CI/CD**: GitHub Actions
+- **Registry**: Docker Hub / GitHub Container Registry
 
 ---
 
@@ -73,38 +66,11 @@ cd nextjs-mysql-devops-test
 **Objective**: Create an optimized Docker image using multi-stage build
 
 **Requirements**:
-- [ ] Use Node.js 18-Alpine base image
+- [ ] Use Node.js base image
 - [ ] Implement multi-stage build (deps, builder, runner)
-- [ ] Minimize final image size (target: <200MB)
+- [ ] Minimize final image size 
 - [ ] Use non-root user for security
-- [ ] Include health check
-- [ ] Proper error handling
 
-**Expected File**: `./Dockerfile`
-
-**Key Points to Cover**:
-- Why multi-stage build?
-- Why Alpine Linux?
-- Why non-root user?
-- What's in .dockerignore?
-
-**Testing**:
-```bash
-# Build locally
-docker build -t myapp:latest .
-
-# Check image size
-docker images
-
-# Run container
-docker run -d -p 3000:3000 --name test myapp:latest
-
-# Verify it works
-curl http://localhost:3000
-
-# Check logs
-docker logs test
-```
 
 ---
 
@@ -138,37 +104,10 @@ docker logs test
 
 **Expected File**: `./docker-compose.yml`
 
-**Testing**:
-```bash
-# Start services
-docker-compose up -d
-
-# Check status
-docker-compose ps
-
-# View logs
-docker-compose logs -f
-
-# Test database
-docker-compose exec db mysql -uroot -ppassword -e "SHOW DATABASES;"
-
-# Stop services
-docker-compose down
 ```
 
 ---
 
-### TASK 5: Create Database Initialization Script ⭐ REQUIRED
-
-**Objective**: Set up database schema automatically
-
-**Requirements**:
-- [ ] Create users table with proper schema
-- [ ] Add indexes for performance
-- [ ] Insert sample data
-- [ ] Use idempotent queries (IF NOT EXISTS)
-
-**Expected File**: `./database/init.sql`
 
 **What it should include**:
 - Table creation
