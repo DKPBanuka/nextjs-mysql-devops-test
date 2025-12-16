@@ -34,9 +34,20 @@ Email the following to support@weblankan.com with CC to manager@weblankan.com:
 - A short, beginner-friendly note on running with `docker compose` (env file, `docker compose up -d --build`, and `docker compose down`).
 
 ## Scoring
-- Fork and repo visibility set to public: 10 pts
-- Production-ready Dockerfile (multi-stage, non-root): 20 pts
-- `docker-compose.yml` with app + MySQL, envs, volumes, healthchecks: 20 pts
-- GitHub Actions pipeline building and pushing image to registry: 25 pts
-- Documentation and provided links/screenshots (including Compose how-to): 15 pts
-- Bonus for clean commits and tag-based versioned images: +5 pts
+
+### 1. Repository Setup & Visibility — 25 Points
+- Working public URL: 5 pts
+- Comprehensive documentation in `README.md`: 15 pts
+- Relevant screenshots included in `README.md`: 5 pts
+
+### 2. Dockerfile — 25 Points
+- Well-documented Dockerfile with clear comments: 20 pts
+- Advanced Docker practices (multi-stage build, non-root user, security best practices, health checks): 5 pts (attempt only if you fully understand the requirements)
+
+### 3. docker-compose.yml — 25 Points
+- Properly documented `docker-compose.yml` with app + MySQL, environment variables, and volumes: 20 pts
+- Health checks configured correctly: 5 pts (attempt only if you fully understand the requirements)
+
+### 4. GitHub Actions (CI/CD) — 25 Points
+- Pipeline for building and pushing Docker images to a registry: 20 pts
+- Multi-stage pipeline configuration: 5 pts
