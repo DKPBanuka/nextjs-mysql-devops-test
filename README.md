@@ -7,7 +7,7 @@ This assessment is simple: complete the items below and share the resulting link
 2. Create a Dockerfile to run the project.
 3. Create `docker-compose.yml` with the app and a MySQL database.
 4. Set up a GitHub Actions CI/CD pipeline that builds the web app image and pushes it to Docker Hub or GitHub Container Registry.
-5. Document what you implemented.
+5. Document what you implemented and how to run the project with `docker-compose.yml` (beginner-friendly).
 6. Provide your public repository link and the published Docker image link(s).
 
 ## Build targets
@@ -31,3 +31,12 @@ Email the following to support@weblankan.com with CC to manager@weblankan.com:
 - Link to the built Docker Hub (or GHCR) image.
 - Screenshot of a successful GitHub Actions run.
 - Screenshot of the running web app UI.
+- A short, beginner-friendly note on running with `docker compose` (env file, `docker compose up -d --build`, and `docker compose down`).
+
+## Scoring
+- Fork and repo visibility set to public: 10 pts
+- Production-ready Dockerfile (multi-stage, non-root): 20 pts
+- `docker-compose.yml` with app + MySQL, envs, volumes, healthchecks: 20 pts
+- GitHub Actions pipeline building and pushing image to registry: 25 pts
+- Documentation and provided links/screenshots (including Compose how-to): 15 pts
+- Bonus for clean commits and tag-based versioned images: +5 pts
